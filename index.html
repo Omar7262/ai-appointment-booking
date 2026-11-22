@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Appointment Booking</title>
+  <meta name="google-client-id" content="" />
+  <link rel="stylesheet" href="style.css?v=1" />
+</head>
+<body>
+  <main class="split">
+    <section class="side side-copy">
+      <h1><span class="h1-blue">Never miss an </span><span class="h1-red">appointment </span><span class="h1-yellow">again — let AI book it </span><span class="h1-dim">for you automatically. 📅</span></h1>
+      <div class="kicker">
+        <strong>BOOK SMARTER WITH AI</strong>
+        <span class="kicker__sub">Trusted by 10,000+ busy teams</span>
+        <span class="rating">
+          <span class="rating__score" id="rating-score">9.2</span>
+          <span class="rating__stars" id="rating-stars" role="img" aria-label="Rated 9.2 out of 10">
+            <span class="rating__on">&#9733;</span><span class="rating__on">&#9733;</span><span class="rating__on">&#9733;</span><span class="rating__on">&#9733;</span><span class="rating__on">&#9733;</span>
+          </span>
+        </span>
+        <span class="check">&#10004;</span>
+      </div>
+
+      <form id="signup-form" novalidate>
+        <label class="sr-only" for="email-input">Email address</label>
+        <input id="email-input" type="email" name="email" placeholder="you@example.com"
+               autocomplete="email" autocapitalize="none" autocorrect="off"
+               spellcheck="false" required />
+        <p class="field-hint"><span class="hint-alert">Made a mistake?</span> Reopen this link to book again</p>
+        <div class="btn-anchor">
+          <p class="trust-strip" id="trust-strip">
+            <svg class="trust-strip__lock" viewBox="0 0 24 24" width="11" height="11" aria-hidden="true">
+              <path fill="currentColor" d="M12 1a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2h-1V6a5 5 0 0 0-5-5zm-3 8V6a3 3 0 1 1 6 0v3H9z" />
+            </svg>
+            <span>Secure booking</span>
+            <span class="trust-strip__sep"></span>
+            <span>No spam</span>
+          </p>
+          <button type="submit" class="btn" id="submit-btn">Book My Slot</button>
+        </div>
+        <p class="offer-timer" id="offer-timer">
+          <span class="offer-timer__label" id="offer-label"><span class="w-limited">Limited</span> <span class="w-time">Time</span> <span class="w-offer">Offer</span></span>
+          <span class="offer-timer__clock" id="offer-clock">15:00</span>
+        </p>
+      </form>
+      <div class="quick-pick" id="quick-pick" hidden>
+        <button type="button" class="chip" id="pick-contacts">Use my contacts</button>
+      </div>
+      <div class="google-slot" id="google-slot" hidden>
+        <div class="google-divider"><span>or</span></div>
+        <div id="google-button"></div>
+      </div>
+      <p id="form-message" class="form-message" aria-live="polite"></p>
+      <div class="fix-row" id="fix-row" hidden>
+        <button type="button" class="chip" id="fix-btn"></button>
+      </div>
+      <div class="confirm-bar" id="confirm-bar" hidden>
+        <p class="confirm-bar__text">
+          Is this you? <strong id="found-email"></strong>
+        </p>
+        <div class="confirm-bar__actions">
+          <button type="button" class="btn btn--send" id="confirm-send">Yes, use it</button>
+          <button type="button" class="btn btn--change" id="confirm-change">No, different email</button>
+        </div>
+      </div>
+      <div class="already-bar" id="already-bar" hidden>
+        <p class="already-bar__text" id="already-text"></p>
+        <button type="button" class="chip" id="not-you">Not you? Use a different email</button>
+      </div>
+      <a class="continue-link" id="continue-link" href="#" hidden>Continue to your booking page &rarr;</a>
+      <p class="what-you-get">
+        <span class="get-heading">What you get with AI appointment booking</span>
+        <span class="get-item"><span class="check">&#10004;</span> Instant AI-confirmed appointments</span>
+        <span class="get-item"><span class="check">&#10004;</span> Automatic reminders that cut no-shows</span>
+        <span class="get-item"><span class="check">&#10004;</span> Smart scheduling that finds the best time for everyone</span>
+      </p>
+
+    </section>
+
+    <section class="side side-image">
+      <img id="room-img"
+           src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1000&q=80"
+           alt="AI appointment booking calendar" />
+    </section>
+  </main>
+
+  <script src="script.js?v=1"></script>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</body>
+</html>
