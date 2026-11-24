@@ -192,7 +192,7 @@ fixBtn.addEventListener("click", () => {
   fieldFocused = true;
   emailInput.classList.remove("invalid");
   hideFixRow();
-  setMsg("Check it looks right, then tap Book My Slot.", "");
+  setMsg("Check it looks right, then tap Submit.", "");
 });
 
 const RESERVED_EMAIL_DOMAINS = new Set([
@@ -464,7 +464,7 @@ function countdownMarkup(lead, remaining) {
 }
 
 // The submit button carries the countdown too, so the visitor watching the
-// button is told a redirect is coming instead of seeing a dead "Book My Slot".
+// button is told a redirect is coming instead of seeing a dead "Submit".
 function paintRedirectButton(remaining) {
   if (!submitBtn) return;
   submitBtn.disabled = true;
@@ -485,7 +485,7 @@ function clearRedirectButton() {
   submitBtn.disabled = false;
   submitBtn.classList.remove("redirecting");
   submitBtn.removeAttribute("aria-label");
-  submitBtn.textContent = "Book My Slot";
+  submitBtn.textContent = "Submit";
 }
 
 function paintCountdown(lead, remaining) {
