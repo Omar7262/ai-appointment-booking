@@ -1,5 +1,5 @@
 /**
- * AI Appointment Booking - lead capture backend.
+ * BookFlow Newsletter - lead capture backend.
  *
  * HOW TO USE
  *   1. Paste this whole file into the Apps Script editor (replace everything).
@@ -13,7 +13,7 @@
  * a new one is created automatically. Every booking request also emails you.
  */
 
-var BOOK_NAME = "AI Appointment Booking Leads";
+var BOOK_NAME = "BookFlow Newsletter Signups";
 var SHEET_NAME = "Sheet1";
 var HEADERS = ["Email", "Valid", "Reason", "Page", "Referrer", "Time"];
 var SHEET_ID = "";
@@ -40,7 +40,7 @@ function doGet(e) {
       });
     }
 
-    return json_({ ok: true, message: "Signup endpoint is live." });
+    return json_({ ok: true, message: "BookFlow newsletter endpoint is live." });
   } catch (err) {
     return json_({ ok: false, error: String(err) });
   }
@@ -95,7 +95,7 @@ function notify_(email, reason) {
   try {
     MailApp.sendEmail(
       to,
-      "New booking request: " + email,
+      "New BookFlow newsletter signup: " + email,
       "Email: " + email + (reason ? "\nFlagged: " + reason : "") + "\nTime: " + new Date()
     );
   } catch (err) {

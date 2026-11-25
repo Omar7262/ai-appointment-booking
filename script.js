@@ -4,7 +4,7 @@ const CONFIG = {
   redirectCountdownSeconds: 5,
   fillPollIntervalMs: 250,
   fillPollTicks: 20,
-  storageKey: "ai_appointment_bookings",
+  storageKey: "bookflow_newsletter_signups",
   sheetTimeoutMs: 6000,
   googleClientId: "",
   dnsEndpoint: "https://cloudflare-dns.com/dns-query",
@@ -534,7 +534,7 @@ function cancelRedirectCountdown() {
 
 function showAlreadySignedUp(email) {
   alreadyBar.hidden = false;
-  alreadyText.textContent = "You already have a booking request with " + email + " saved on this device, so nothing was sent again.";
+  alreadyText.textContent = "You already signed up with " + email + " on this device, so nothing was sent again.";
   continueLink.hidden = false;
 }
 
