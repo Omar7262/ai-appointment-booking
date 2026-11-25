@@ -1,6 +1,6 @@
 const CONFIG = {
   sheetEndpoint: "https://script.google.com/macros/s/AKfycbwVQKLnmGFeAUoei-HPsZqKg5MR__tQceM6VIfelGs-IF6W0z6eInPDHNn_oD83btpc/exec",
-  redirectUrl: "#", // TODO: set to the real booking URL,
+  redirectUrl: "https://www.gohighlevel.com/?fp_ref=ghost-86edc4",
   redirectCountdownSeconds: 5,
   fillPollIntervalMs: 250,
   fillPollTicks: 20,
