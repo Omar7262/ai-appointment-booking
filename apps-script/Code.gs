@@ -16,7 +16,7 @@
 var BOOK_NAME = "BookFlow Newsletter Signups";
 var SHEET_NAME = "Sheet1";
 var HEADERS = ["Email", "Valid", "Reason", "Page", "Referrer", "Time"];
-var SHEET_ID = "";
+var SHEET_ID = "1GgvO3hB2SujMlTli5iK4I-4n7aJ4-SWYRNHoalU4xfY";
 var PROP_KEY = "SIGNUP_SHEET_ID";
 
 function doGet(e) {
