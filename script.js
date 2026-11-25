@@ -457,7 +457,7 @@ function countdownMarkup(lead, remaining) {
     : "";
   return (
     leadPart +
-    '<span class="cd-label">Redirecting to your booking page</span>' +
+    '<span class="cd-label">You are on the list — redirecting you to the AI appointment tool</span>' +
     countdownDotsHtml() +
     '<span class="cd-num">' + remaining + "</span>"
   );
@@ -688,7 +688,7 @@ async function submitForm() {
   form.reset();
   emailInput.value = "";
   continueLink.hidden = false;
-  startRedirectCountdown("Your appointment request is in!");
+  startRedirectCountdown("You are on the list!");
 }
 
 function stopFillPoll() {
