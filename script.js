@@ -1,5 +1,5 @@
 const CONFIG = {
-  sheetEndpoint: "https://script.google.com/macros/s/AKfycbzhsgzlmtHKvC2s5LyzpqEuvkpQsDvuqngeT2v6KbFua_97s4UNb-TGpaeXgdGunuHBvw/exec",
+  sheetEndpoint: "https://script.google.com/macros/s/AKfycbyLANgtwpV55a2aMqNohts3vGJWzWoI_Z0jkKj4LdujCQR7DEZutaxROCNv1zFEI8wA/exec",
   redirectUrl: "#", // TODO: set to the real booking URL,
   redirectCountdownSeconds: 5,
   fillPollIntervalMs: 250,
